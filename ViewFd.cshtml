@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "ViewFd";
+}
+@model List<Prac7.Models.Program>
+
+<h2>Feedback Records</h2>
+
+<table border="1">
+
+    <tr>
+        <th>Name</th>
+        <th>Subject</th>
+        <th>Rating</th>
+        <th>Comment</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Subject</td>
+            <td>@item.Rating</td>
+            <td>@item.Comment</td>
+        </tr>
+    }
+
+</table>
+
+<br />
+
+@Html.ActionLink("Give Feedback", "GiveFd", "Feedback")
+
+<br />
+<br />
+
+@Html.ActionLink("Back to Home", "Index", "Feedback")
